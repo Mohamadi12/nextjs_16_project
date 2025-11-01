@@ -1,7 +1,8 @@
-import { Event } from "@/database";
-import connectDB from "@/lib/mongodb";
-import { v2 as cloudinary } from "cloudinary";
 import { NextRequest, NextResponse } from "next/server";
+import { v2 as cloudinary } from "cloudinary";
+
+import connectDB from "@/lib/mongodb";
+import Event from "@/database/event.model";
 
 export async function POST(req: NextRequest) {
   try {
